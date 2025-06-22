@@ -7,8 +7,8 @@ Ever wondered who you were in a past life? This magical web application generate
 **Try it yourself:** [https://lnkd.in/g55xXMGZ](https://lnkd.in/g55xXMGZ)
 
 ![Demo GIF Placeholder](https://github.com/PrajwalGpy/Past-Life-Finder/blob/main/Screenshot%202025-06-22%20161342.png)
-*Demo GIF will be added here*
-
+![Demo GIF Placeholder](https://github.com/PrajwalGpy/Past-Life-Finder/blob/main/Screenshot%202025-06-22%20161342.png)
+![Demo GIF Placeholder](https://github.com/PrajwalGpy/Past-Life-Finder/blob/main/Screenshot%202025-06-22%20161342.png)
 ---
 
 ## ✨ Features
