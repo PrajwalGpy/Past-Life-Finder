@@ -4,7 +4,7 @@ Ever wondered who you were in a past life? This magical web application generate
 
 ## 🎭 Live Demo
 
-**Try it yourself:** [Past Life Finder]([https://lnkd.in/g55xXMGZ](https://astral-soul-weaver.lovable.app/))
+**Try it yourself:** ([Past Life Finder](https://astral-soul-weaver.lovable.app/))
 
 ![Demo GIF Placeholder](https://github.com/PrajwalGpy/Past-Life-Finder/blob/main/Screenshot%202025-06-22%20161342.png)
 ![Demo GIF Placeholder](https://github.com/PrajwalGpy/Past-Life-Finder/blob/main/Screenshot%202025-06-22%20162447.png)
