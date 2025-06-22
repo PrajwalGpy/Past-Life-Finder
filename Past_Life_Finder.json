@@ -1,0 +1,167 @@
+{
+  "name": "Past Life Finder",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "c7dce9a8-c573-42a2-b9b0-bde1d115d08a",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "30459ce8-3b7d-4f4e-97af-a7394f2edfa7",
+      "name": "Webhook",
+      "webhookId": "c7dce9a8-c573-42a2-b9b0-bde1d115d08a"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.name }}",
+        "options": {
+          "systemMessage": "=You are a whimsical and poetic AI oracle that reveals fictional past lives.\n\nWhen a user sends you their first name, analyze the name and try to infer what **nation or cultural origin** it is most likely associated with (for example: Indian, French, Japanese, African, Norse, Arabic, etc.). Then, craft a fictional past life that reflects the tone, culture, and mysticism of that region.\n\nBe rich, poetic, and creative in your storytelling.\n\nInclude the following fields in your response (in JSON format):\n\n1. \"past_name\": a fictional name from the inferred culture\n2. \"year\": a specific year when they lived (past or mythic era)\n3. \"location\": a fantasy or real place within that culture\n4. \"role\": a unique, unusual, or beautiful profession\n5. \"story\": a poetic story about their past life and why it was meaningful\n6. \"quote\": a magical or philosophical line to close, in quotation marks\n\nAdd a mysterious, magical, or spiritual touch. The tone should feel ancient, wise, and gentle.\n\nOutput your response in this **structured JSON format**:\n\n{\n  \"past_name\": \"Elros of Lunaria\",\n  \"year\": \"1432\",\n  \"location\": \"The Monastery of Falling Stars\",\n  \"role\": \"Candle-maker who secretly painted night skies\",\n  \"story\": \"In 1432, you were Elros of Lunaria — a humble candle-maker in the Monastery of Falling Stars. By day, you crafted wax to light the halls. By night, you painted constellations on ceilings no one would ever see. Your art was unsigned, but your soul still glows in the cracks of forgotten walls.\",\n  \"quote\": \"Some lights are not made to be seen, but to remind the darkness it never wins.\"\n}\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "c009f82e-de51-42f3-91ac-dd48e4ade09a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        220,
+        220
+      ],
+      "id": "6f9e2e62-6bff-49f8-a9db-fe088a2d2a2a",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "PSoO4YyoduCvztuq",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        580,
+        0
+      ],
+      "id": "0b6ca5a1-cffa-4d80-8837-b35923102ab1",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "prajwalgpy.app.n8n.cloud",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+            "content-length": "57",
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "accept-language": "en-US,en;q=0.5",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "2409:40f2:3048:ac0f:80b7:f2bf:7649:3b17",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "IN",
+            "cf-ray": "953b18757210562c-SIN",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-type": "application/json",
+            "origin": "https://38e45b69-9ea8-4854-b85d-1630a40cff07.lovableproject.com",
+            "priority": "u=1, i",
+            "referer": "https://38e45b69-9ea8-4854-b85d-1630a40cff07.lovableproject.com/",
+            "sec-ch-ua": "\"Brave\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "sec-gpc": "1",
+            "x-forwarded-for": "2409:40f2:3048:ac0f:80b7:f2bf:7649:3b17, 162.158.162.69",
+            "x-forwarded-host": "prajwalgpy.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-44-68df68bcf-fzkfl",
+            "x-is-trusted": "yes",
+            "x-real-ip": "2409:40f2:3048:ac0f:80b7:f2bf:7649:3b17"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "name": "prajwal",
+            "timestamp": "2025-06-22T10:34:48.740Z"
+          },
+          "webhookUrl": "https://prajwalgpy.app.n8n.cloud/webhook/c7dce9a8-c573-42a2-b9b0-bde1d115d08a",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8398ec69-6972-49dc-b91d-de3297fc2c80",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9d674cf8f77a81e3eb082a61ecd6aba6031ec8b743173bd02fada9d2dde9b54d"
+  },
+  "id": "bqHOLM0fSiTvUP1w",
+  "tags": []
+}
