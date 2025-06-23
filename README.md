@@ -184,11 +184,6 @@ graph TD
 
 ---
 
-## 🔗 Related Projects
-
-- [AI Personal Assistant System](../ai-personal-assistant/)
-- [LinkedIn Content Automation](../linkedin-content-automation/)
-- [Invoice Processing Automation](../invoice-processing-automation/)
 
 ---
 
@@ -265,7 +260,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - **Creator:** Prajwal Gopal Poojary
 - **Email:** prajwalgpa@gmail.com
-- **Portfolio:** [prajwalgopalpoojary.netlify.app](https://prajwalgopalpoojary.me/)
+- **Portfolio:** [https://prajwalgopalpoojary.me/](https://prajwalgopalpoojary.me/)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prajwalgopalpoojary/)  
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/prajwalgpa)
